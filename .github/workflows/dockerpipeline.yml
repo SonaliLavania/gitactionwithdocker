@@ -49,7 +49,7 @@ jobs:
            az account show
            az acr login --name acrsonali
            echo "Login in acr"
-           docker pull acrsonali.azurecr.io/nginx:latest
+           docker push acrsonali.azurecr.io/nginx:latest
         shell: bash
     
    
