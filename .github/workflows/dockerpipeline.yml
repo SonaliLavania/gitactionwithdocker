@@ -52,4 +52,10 @@ jobs:
            docker push acrsonali.azurecr.io/nginx:latest
         shell: bash
     
+    
+      - name: Azure Container Apps Build and Deploy
+        uses: Azure/container-apps-deploy-action@v0
+        with:
+          acrName: "acrsonali"
+          imageToDeploy: "acrsonali.azurecr.io/nginx"
    
