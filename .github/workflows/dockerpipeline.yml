@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+         
       - name: Azure Container Registry Build
         uses: Azure/acr-build@v1
         with:
@@ -42,5 +42,5 @@ jobs:
           service_principal_password: "pOD8Q~LS37_dPla0dJsH3YNzpOLz4VtBfJD14c9U"
           tenant:  "d5446430-c01f-4347-96cc-e79521dcd885"
           registry: "acrsonali"
-          repository: "nginx"
+          repository: "acrsonali.azurecr.io"
           image: "nginx:latest"
