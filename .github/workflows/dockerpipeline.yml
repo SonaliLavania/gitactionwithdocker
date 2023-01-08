@@ -42,13 +42,14 @@ jobs:
       - name: Run script file
         run: |
            docker pull nginx
-           docker tag nginx acrsonali.azurecr.io/nginx
+           docker tag nginx acrsonali.azurecr.io/nginx:latest
+           docker images
            curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
            az login  --service-principal -u "ef11f03c-1933-4e1d-a4ba-af7073812062" -p "pOD8Q~LS37_dPla0dJsH3YNzpOLz4VtBfJD14c9U" --tenant "d5446430-c01f-4347-96cc-e79521dcd885"
            az account show
            az acr login --name acrsonali
            echo "Login in acr"
-           docker pull acrsonali.azurecr.io/nginx
+           docker pull acrsonali.azurecr.io/nginx:latest
         shell: bash
     
    
