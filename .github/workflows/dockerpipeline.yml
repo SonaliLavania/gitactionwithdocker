@@ -34,7 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+      
+      
+      
       - name: Azure CLI Action
         uses: Azure/cli@v1.0.7
         with:
@@ -44,7 +46,8 @@ jobs:
              az acr login --name acrsonali
              
          
-      
+      - name: setup-docker
+        uses: docker-practice/actions-setup-docker@1.0.11
      
       - name: Azure Container Registry Build
         uses: Azure/acr-build@v1
